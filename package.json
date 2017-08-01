@@ -1,0 +1,49 @@
+{
+  "name": "h5-test-client",
+  "description": "The HTML5 HangQing Client of KDS Mobile Stock",
+  "repository": "KDS",
+  "version": "0.1.0",
+  "author": "KDS App Develop Team",
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fastclick": "^1.0.6",
+    "iscroll": "^5.2.0",
+    "jquery": "^2.1.4",
+    "less": "^1.5",
+    "protobufjs": "^5.0.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-router": "^2.7.0",
+    "reactjs-iscroll": "^0.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.9.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "html-webpack-plugin": "^2.22.0",
+    "http-server": "^0.9.0",
+    "less": "^2.7.1",
+    "less-loader": "^0.7.7",
+    "style-loader": "^0.8.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "start": "npm run webpack & npm run serve",
+    "start-win": "start npm run webpack && start npm run serve",
+    "webpack": "webpack --progress --colors --watch",
+    "deploy": "npm run webpack-deploy & npm run serve",
+    "pack": "set NODE_ENV=production&&webpack -p --config webpack.production.config.js",
+    "webpack-deploy": "set NODE_ENV=production&&webpack -p --progress --colors --watch --config webpack.production.config.js",
+    "serve": "http-server -p 8827",
+    "lint": "eslint"
+  }
+}
